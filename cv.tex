@@ -1,15 +1,20 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,9.5pt]{article}
 \usepackage{geometry}
 \geometry{
-  left=0.8in,
-  right=0.8in,
-  top=0.9in,
-  bottom=0.9in
+  left=0.5in,
+  right=0.5in,
+  top=0.3in,
+  bottom=0.3in
 }
-\usepackage{helvet}
+% \usepackage{helvet}
+% \renewcommand{\familydefault}{\sfdefault}
+\usepackage[sfdefault]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{xhfill}
 \hypersetup{
   colorlinks=true,
   linkcolor=blue,
@@ -20,39 +25,17 @@
 
 % \author{Ahmed Shariff}
 \usepackage{multicol}
-\title{Shariff Faleel \linebreak {\normalsize% 37/A, Sri Dharmapala Mawatha, Asgiriya, Kandy, Sri Lanka. \linebreak
-  +14313746743
-  \hspace{5cm}
-  % ahmed.shariff@live.com
-  shariff.mfa@outlook.com
-  \linebreak
-  $
-  \begin{array}{l}
-    \includegraphics[height=0.5cm, width=0.5cm]{link}
-  \end{array}$
-  \url{shariff-faleel.com}
-  \linebreak
-  $
-  \begin{array}{l}
-    \includegraphics[height=0.53cm, width=0.53cm]{github}
-  \end{array}$
-  \url{github.com/ahmed-shariff}
-  \hspace{2cm}$
-  \begin{array}{l}
-    \includegraphics[height=0.5cm, width=0.5cm]{In}
-  \end{array}$
-  \url{lk.linkedin.com/in/ahshariff}
-}}
+\title{}
 \date{}
-\makeatletter
-\renewcommand{\@maketitle}{
-  \newpage
-  % \null
-  \vskip 2em%
-  \begin{center}%
-    {\LARGE \@title \par}%
-  \end{center}%
-  \par} \makeatother
+% \makeatletter
+% \renewcommand{\@maketitle}{
+%   \newpage
+%   % \null
+%   \vskip 2em%
+%   \begin{center}%
+%     {\LARGE \@title \par}%
+%   \end{center}%
+%   \par} \makeatother
 
 \usepackage[
 backend=biber,
@@ -71,178 +54,227 @@ sorting=none
 \usepackage{array}
 \usepackage{textcomp}
 \usepackage{multirow}
+\usepackage{eso-pic}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{nopageno}
 \addbibresource{citations.bib}
 % \interfootnotelinepenalty=10000
 % \numberwithin{figure}{section}
+\newcommand{\fiverate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle\faCircle}}
+\newcommand{\fourrate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle\faCircle[regular]}}
+\newcommand{\threerate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle[regular]\faCircle[regular]}}
+\newcommand{\drawratebox}[2]{%
+  \makebox[0.4\textwidth]{~~#1\hfill#2~~}}
+% from https://tex.stackexchange.com/questions/77821/insert-text-into-hrulefill
+\newcommand*{\titlerulefill}[3][]{%
+  \makebox[#2]{#1%
+    \leaders\hrule height \dimexpr.5ex+.2pt\relax depth \dimexpr -.5ex+.2pt\relax \hfill% Left rule
+    \enskip{#3}\enskip% Text (and surrounding spaces)
+    \leaders\hrule height \dimexpr.5ex+.2pt\relax depth \dimexpr -.5ex+.2pt\relax \hfill\kern0pt}% Right rule
+}
+\newcommand{\skilltitle}[1]{\hfil\titlerulefill[\color{black!25}]{0.6\linewidth}{\footnotesize\color{black!45}#1}\hfil}
+\newcommand{\sectiontitle}[1]{{\hfill\titlerulefill{0.7\textwidth}{\large #1}\hfill}\vspace{-0.5cm}}
+\newcommand{\timeline}[3]{%
+  \begin{tabbing}
+    \=\hspace*{1cm}\=\hspace*{6cm}\=\hspace*{5cm}\= \kill
+    \>\>\textbf{#1} \> \textbf{#2}\\\>\>\> \emph{#3}
+  \end{tabbing}
+}
+
+\setlist[itemize]{leftmargin=2em}
 
 \begin{document}
-\maketitle
-% \noindent\rule{\textwidth}{1pt}\\
-\vspace{15pt}
-% \noindent\textbf{\large\textbar{Research Interests:}}
-% \vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}\\
-% \vspace{-8pt}
-\noindent\textbf{\large\textbar{Research Interests:}}
-\vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}
-\\
-Primary research interest is in augmenting human cognition. I
-am particularly interested in using state-of-the-art artificial
-intelligence technologies with ubiquitous computing to expand the
-human day-to-day experience.
-% My primary research interest is in artificial general intelligence. Understanding human intelligence, developing intelligent systems that can improve life in general and understanding their impact on society have been great interests of mine. I am particularly interested in data-driven intelligent systems and what “meaning” is in such systems. As such I am extremely interested in extending the understanding of the human mind to build better technologies.
-% As such, I am also interested in the merger of deep learning approaches and symbolic artificial intelligence (GOFAI) and in systems that can adapt while deployed.
-
-\vspace{15pt}
-\noindent\textbf{\large\textbar{Education:}}
-\vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}
-\vspace{-8pt}
-\begin{tabbing}
-  \=\hspace*{3cm}\=\hspace*{3cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ 2019 - 2023} \> \textbf{University of Britsh Columbia - Okanagan} \\ \> \> \textbf{PhD (Computer Science)}
-\end{tabbing}
+% \rule{\textwidth}{1pt}
+% \vspace{0.45cm}
+\begin{center}
+  {\fontfamily{epigrafica}\selectfont\color{black!85}\LARGE \textbf{Shariff Faleel}}\\
+\end{center}
+\vspace{-0.4cm}
+% \rule{\textwidth}{1pt}
+% \begin{flushright}
+\begin{center}
+  Full name: \textbf{Ahmed Shariff Mohommed Faleel}\\[0.3cm]
+  \textbullet~~\faIcon{mobile-alt} +14313746743~~\textbullet~~\faIcon{envelope}~shariff.mfa@outlook.com~~\textbullet~~\faIcon{link}~\url{shariff-faleel.com}~~\textbullet\\
+  \textbullet~~\faIcon{github}~\url{github.com/ahmed-shariff}~~\textbullet~~\faIcon{linkedin}~\url{lk.linkedin.com/in/ahshariff}~~\textbullet
+\end{center}
+\sectiontitle{Summary}\\[0.1cm]
+\begin{center}
+  \parbox{0.9\linewidth}{Primary research interest is in augmenting human cognition. I
+    am particularly interested in using state-of-the-art artificial
+    intelligence technologies with ubiquitous computing to expand the
+    human day-to-day experience. }
+\end{center}
+\vspace{0.1cm}
+\sectiontitle{Technical Skills}\\
+% \rule{0.75\textwidth}{0.4pt}
+\begin{center}
+  \parbox{0.9\textwidth}{
+    \skilltitle{Programming}\\[2pt]
+    \vspace{-0.6cm}\\
+    \drawratebox{python, C\#, Javascript, Lisp}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{C++, Java}{\fourrate}\\[2pt]
+  }
+  \vspace{-0.1cm}\\
+  \parbox{0.9\textwidth}{
+    \skilltitle{Platform}\\[2pt]
+    \vspace{-0.6cm}\\
+    \drawratebox{Unity (AR/VR/Mobile)}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{Android}{\fourrate}\\[2pt]
+  }
+  \vspace{-0.1cm}\\
+  \parbox{0.9\textwidth}{
+    \skilltitle{AI Tools}\\[2pt]
+    \vspace{-0.6cm}\\
+    \drawratebox{Data analysis}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{Deep Leaning (CV, NLP)}{\fiverate}\\[2pt]
+    \drawratebox{MLOps}{\threerate}\\[2pt]
+  }
+  \vspace{-0.1cm}\\
+  \parbox{0.9\textwidth}{
+    \skilltitle{Research}\\[2pt]
+    \vspace{-0.6cm}\\
+    \drawratebox{Ideation \& planning}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{User studies}{\fiverate}\\[2pt]
+    \drawratebox{Analysis \& reporting}{\fiverate}\\[2pt]
+  }
+  \vspace{-0.1cm}\\
+  \parbox{0.9\textwidth}{
+    \skilltitle{Miscellaneous}\\[2pt]
+    \vspace{-0.6cm}\\
+    \drawratebox{Cloud platforms (aws, gcloud)}{\threerate}
+    \hspace{1cm}
+    \drawratebox{Database (mongodb, firebase)}{\threerate}\\[2pt]
+    \drawratebox{Embedded systems}{\threerate}
+  }
+\end{center}
+\vspace{0.1cm}
+\sectiontitle{Soft Skills}\\
+\begin{center}
+  \parbox{0.9\textwidth}{
+    \drawratebox{Teamwork}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{Communication}{\fiverate}\\[2pt]
+    \drawratebox{Presentation}{\fiverate}
+    \hspace{1cm}
+    \drawratebox{Technical writing}{\fiverate}\\[2pt]
+    \drawratebox{Leadership}{\fiverate}
+  }
+\end{center}
+% \\    
+\vspace{0.4cm}
+\sectiontitle{Work \& Research Experience}\\
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{March 2021 - April 2022}{Associate Researcher, Intern}{Huawei Technologies Canada}
+    \centering
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \setlength\itemsep{-0.1cm}
+    \item Was part of the Human Machine Interactions lab. Worked on a range of HCI projects.
+    \item Developed research ideas, executed relevant user studies and built demo applications.
+    \item Produced a paper on typing on virtual keyboards (currently in submission at CHI '23).
+    \end{itemize}
+  \end{minipage}
+\end{center}
+\vspace{-0.1cm}
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{August 2019 - Present}{PhD student}{University of British Columbia - Okanagan}
+    \centering
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \setlength\itemsep{-0.1cm}
+    \item Under the supervision of Prof. Pourang Irani.
+    \item Exploring AR/VR input and output capabilities. Developed Hand Proximate UI as a novel interaction modality for AR/VR.
+      \vspace{-5pt}
+      \begin{itemize}
+      \item Technologies Explored: Deep learning models (CV), Gesture-based interactions (Leap Motion, Vicon motion tracking, CV), VR/AR (Oculus, Epson \& Hololens using Unity, Android \& Python)
+      \end{itemize}
+      \vspace{-0.2cm}
+    \item Was instructor for a graduate level course on introducing designing immersive applications for VR \& AR.
+    \end{itemize}
+  \end{minipage}
+\end{center}
+\vspace{-0.1cm}
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{July 2017 - August 2019}{Research Assistant}{University of Peradeniya}
+    \centering
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \setlength\itemsep{-0.1cm}
+    \item Under the supervision of Dr. R.D. Nawarathna.
+    \item Conducted research on deep-learning based computer vision applications as part of a collaboration with codegen international.
+    \item Developed a prototype system for a cashier assistant:
+      \vspace{-5pt}
+      \begin{itemize}
+        \setlength\itemsep{-0.1cm}
+      \item Tools/framworks used: NVIDIA Jetson, Raspberry Pi, Python, pytorch, django, AWS Lambda, AWS Beanstalk, MongoDB.
+      \item Framework developed for automated ML experimenting, training and deployment.
+      \end{itemize}
+    \end{itemize}
+  \end{minipage}
+\end{center}
+\vspace{-0.1cm}
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{March 2017 - June 2017}{Temporary Demonstrator}{University of Peradeniya}
+    \centering
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \setlength\itemsep{-0.1cm}
+    \item Conducted practical sessions (Programming concepts, Data structures and algorithms, Computer architecture/assembly) for undergraduate students. % The Medium of Instruction was English.
+    \item Technical committee member of the Postgraduate Institute of Science Research Congress, 2017.
+    \item Researched Dialogue Management systems.
+    \end{itemize}
+  \end{minipage}
+\end{center}
+\vspace{-0.1cm}
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{August 2016 - January 2016}{Software Engineering Intern}{IFS R\&D International}
+    \centering
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \setlength\itemsep{-0.1cm}
+    \item Developed dependency visualization of system modules. Using Common Lisp, Python, and Javascript.
+    \end{itemize}
+  \end{minipage}
+\end{center}
+\vspace{0.3cm}
+\sectiontitle{Education}\\
+\vspace{-0.4cm}\\
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{September 2019 - Present}{PhD (Computer Science)}{University of Britsh Columbia - Okanagan}
+    \centering
+    \vspace{-0.3cm}
+    \textbullet~Supervisor - Prof. Pourang Irani \qquad \textbullet~GPA: 4.25/4.5
+  \end{minipage}
+\end{center}
+\begin{center}
+  \begin{minipage}[h]{0.95\linewidth}
+    \timeline{March 2013 - December 2016}{BSc (Computer Science)}{University of Peradeniya}
+    \centering
+    \vspace{-0.3cm}
+    \textbullet~Major: Computer Science \qquad \textbullet~Minor: Statistics \& Mathematics\\
+    \textbullet~GPA: 3.5/4.0 (87\%) (Second Class Honours - Upper Division)
+  \end{minipage}
+\end{center}
+\vspace{0.3cm}
+\sectiontitle{Publications}
+\vspace{0.1cm}\\
 \begin{itemize}
-\item[] Supervisor: Dr. Pourang Irani\\
-  GPA: 4.25/4.5
-\end{itemize}
-\begin{tabbing}
-  \=\hspace*{3cm}\=\hspace*{3cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ 2013 - 2017} \> \textbf{University of Peradeniya} \\ \> \> \textbf{BSc (Computer Science)}
-\end{tabbing}
-\begin{itemize}
-\item[] Major: Computer Science \\
-  Minor: Statistics \& Mathematics \\
-  % Medium of instruction: English   \\
-  % Course Duration: Four Years (Full Time) \\
-  GPA: 3.50/4.0 (87\%) \emph{(Second Class Honours - Upper Division)}
-% \item \textbf{Presented thesis report of the research project} as part of the final year course:
-%   \begin{itemize}
-%   \item[] Developed a dialogue management model. The focus of the model was to integrate back-end functionality in the dialogue manager’s task more tightly and learn user-inputs, which in turn can translate to easier integration of dialogue manager/spoken dialogue system with the back-end system. \\
-%     \emph{GitHub: \url{www.github.com/ahmed-shariff/dialog_manager}}
-%   \end{itemize}
-% \item \textbf{Completed software project} as a part of the credit requirement of the third year of the course:
-%   \begin{itemize}
-%   \item[] Designed a speech recognition system based on the CMUSphinx speech engine. \\
-%     \emph{GitHub: \url{www.github.com/ahmed-shariff/speech-recognition-framework}}
-%   \end{itemize}
-% \item \textbf{Designed an algorithm} for a mini project as a part of the module Image Processing:
-%   \begin{itemize}
-%   \item[] The algorithm was to solve the stereo correspondence problem using basic image processing techniques in Matlab. \\
-%     \emph{GitHub: \url{www.github.com/ahmed-shariff/simple-stereo-matching}}
-%   \end{itemize}
-% \item \textbf{Presented a seminar on quantum computing}, covering the basics of quantum computing.
-\end{itemize}
-
-% \vspace{0pt}
-% \begin{tabbing}
-%   \=\hspace*{3cm}\=\hspace*{3cm}\= \kill
-%   \>\textbf{\large \textbar{}}\textbf{ 2017} \> \textbf{English proficiency: IELTS}
-% \end{tabbing}
-% \vspace{-20pt}
-% \begin{itemize}
-% \item[]\textbf{Overall band score: 8.0}\\
-%   \vspace{-10pt}
-%   \begin{tabular}{ m{0.18\textwidth} m{0.18\textwidth} m{0.18\textwidth} m{0.18\textwidth} }%{ l{0.25\textwidth} l{0.25\textwidth} l{0.25\textwidth} | l{0.25\textwidth}}
-%     \hspace{-8pt}Listening: 7.5 & Reading: 8.5 & Writing: 7.0 & Speaking: 9.0\\
-%   \end{tabular}
-% \end{itemize}
-\vspace{15pt}
-\noindent\textbf{\large\textbar{Work \& Research Experience:}}
-\vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}
-\vspace{-8pt}
-\begin{tabbing}
-  \=\hspace*{6cm}\=\hspace*{5cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ March 2021 - April 2022} \> \textbf{Associate Researcher, Intern}\\\>\> \emph{Huawei Technologies Canada}
-\end{tabbing}
-\vspace{-8pt}
-\begin{itemize}
-  \setlength\itemsep{0pt}
-  \item Was part of the Human Machine Interactions lab. Worked on a range of HCI projects.
-  \item Developed research ideas, executed relevant user studies and built demo applications.
-\end{itemize}
-\begin{tabbing}
-  \=\hspace*{6cm}\=\hspace*{5cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ Augest 2019 - Present} \> \textbf{PhD Student}\\\>\> \emph{University of Manitoba}
-\end{tabbing}
-\vspace{-8pt}
-\begin{itemize}
-  \setlength\itemsep{0pt}
-\item Under the supervision of Dr Pourang Irani
-\item Exploring AR/VR input and output capabilities.
-\item Developed Hand Proximate UI as a novel interaction modality for AR/VR.
-  \vspace{-8pt}
-  \begin{itemize}
-  \item Technologies Explored: Deep learning models (CV), Gesture based interactions (Leap Motion, Vicon motion tracking, CV), VR/AR (Oculus, Epson \& Hololens using Unity, Android \& Python)
-  \end{itemize}
-\end{itemize}
-\begin{tabbing}
-  \=\hspace*{6cm}\=\hspace*{5cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ July 2017 - Augest 2019} \> \textbf{Research Assistant}\\\>\> \emph{University of Peradeniya}
-\end{tabbing}
-\vspace{-8pt}
-\begin{itemize}
-  \setlength\itemsep{0pt}
-\item Under the supervision of Dr R.D. Nawarathna.
-\item Conducted research on deep learning based computer vision applications as part of an industry collaboration with codegen international.
-\item Developed a prototype system for a cashier assistant:
-  \vspace{-8pt}
-  \begin{itemize}
-    \setlength\itemsep{0pt}
-  \item Tools/framworks used: NVIDIA Jetson, Raspberry Pi, Python, pytorch, django, AWS Lambda, AWS Beanstalk, MongoDB.
-  \item Framework developed for automated ML experimenting, training and deployment.
-  \end{itemize}
-\end{itemize}
-\begin{tabbing}
-  \=\hspace*{6cm}\=\hspace*{5cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ March 2017 - June 2017} \> \textbf{Temporary Demonstrator}\\\>\> \emph{University of Peradeniya}
-\end{tabbing}
-\vspace{-8pt}
-\begin{itemize}
-  \setlength\itemsep{0pt}
-\item Conducted practical sessions (Programming concepts, Data structures and algorithms, Computer architecture/assembly) for undergraduate students. % The Medium of Instruction was English.
-\item Technical committee member of the Postgraduate Institute of Science Research Congress, 2017.
-\item Conducted research on Dialogue Management systems.
-\end{itemize}
-
-\begin{tabbing}
-  \=\hspace*{6cm}\=\hspace*{5cm}\= \kill
-  \>\textbf{\large \textbar{}}\textbf{ Augest 2016 - January 2016} \> \textbf{Software Engineering Intern}\\\>\> \emph{IFS R\&D International}
-\end{tabbing}
-\vspace{-8pt}
-\begin{itemize}
-  \setlength\itemsep{0pt}
-\item Developed dependency visualization of system modules. Using Common Lisp, Python, and Javascript.
-\end{itemize}
-\vspace{10pt}
-\noindent\textbf{\large\textbar{Additional Information:}}
-\vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}\\
-\vspace{-8pt}
-\begin{description}  
-  \setlength\itemsep{0pt}
-\item[Leadership Skills:] At St. Anthony’s College I played hockey for the U-13, U-15,
-  U-17 and U-19 teams. Held positions as the president of the Islamic
-  Students Movement, chief editor of the Tamil Cultural Society, and
-  also was part of the Interact Club, Global Linking Programme, and
-  Sri Lanka Unites Programme. I also was part of the debate team
-  at the University of Peradeniya and the drama team that took part in
-  the drama competitions within the University.
-\item[Languages:] English, Tamil (first language), Sinhala
-\item [Technical skills:] Python (pytorch, flask, django, etc.), C\# (Unity), Javascript, Lisp, Java, C++, C, PHP, Matlab, Emacs, etc.
-\item []Machine learning and deep learning (have exprience with pytorch and tensorflow).
-\item []Worked in computer vision,  Natural language processing, dialogue systems, development for AR/VR.
-\item []Strong communication, collaboration and leadership skills.
-\item []Well able to work independently and take initiative when necessary.
-\item []Team player and good interpersonal skills.
-\end{description}
-
-\vspace{10pt}
-\noindent
-\textbf{\large\textbar{Publications:}}
-\vspace{-8pt}\noindent\\\rule{0.75\textwidth}{0.4pt}
-\vspace{-8pt}
-\begin{itemize}
-  \item[]\textbf{Shariff AM Faleel}, Yishuo Liu, Roya A Cody, Bradley Rey, Linghao Du, Jiangyue Yu, Da-Yuan Huang, Pourang Irani, Wei Li. (2022) ``T-Force: Exploring the Use of Typing Force for Three State Virtual Keyboards''. (In submission at CHI 2023)
+  \item[]Fouad Alallah, \textbf{Shariff AM Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani. (2023) ``Evaluation of Situated Space-time Cube Analytics for In-situ Data Exploration''. (In submission at Information Visualization)
+  \item[]\textbf{Shariff AM Faleel}, Yishuo Liu, Roya A Cody, Bradley Rey, Linghao Du, Jiangyue Yu, Da-Yuan Huang, Pourang Irani, Wei Li. (2023) ``T-Force: Exploring the Use of Typing Force for Three State Virtual Keyboards''. (In submission at CHI 2023)
   \item[]Ali Neshati, Aaron Salo, \textbf{Shariff AM Faleel}, Ziming Li, Hai-Ning Liang, Celine Latulipe, and Pourang Irani. 2022. ``EdgeSelect: Smartwatch Data Interaction with Minimal Screen Occlusion.'' In Proceedings of the 2022 International Conference on Multimodal Interaction (ICMI '22). Association for Computing Machinery, New York, NY, USA, 288–298. \\https://doi.org/10.1145/3536221.3556586
-  \item[]Fouad Alallah, \textbf{Shariff Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani (2022). ``SSCA: situated space-time cube analytics.'' In M. Agus, W. Aigner, and T. Hoellt, EuroVis 2022 - Short Papers (pp. ). : The Eurographics Association.
+  \item[]Fouad Alallah, \textbf{Shariff AM Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani (2022). ``SSCA: situated space-time cube analytics.'' In M. Agus, W. Aigner, and T. Hoellt, EuroVis 2022 - Short Papers (pp. ). : The Eurographics Association.
   \item[]\textbf{Shariff AM Faleel}, Michael Gammon, Kevin Fan, Da-Yuan Huang, Wei Li and Pourang Irani, ``HPUI: Hand Proximate User Interfaces for One-Handed Interactions on Head Mounted Displays,'' in IEEE Transactions on Visualization and Computer Graphics, vol. 27, no. 11, pp. 4215-4225, Nov. 2021, doi: 10.1109/TVCG.2021.3106493.
   \item[]\textbf{Shariff AM Faleel}, Bibhushan Raj Joshi and Bradley Rey, ``Writely: Force Feedback for Non-Dominant Hand Writing Training,'' 2021 IEEE World Haptics Conference (WHC), 2021, pp. 340-340, doi: 10.1109/WHC49131.2021.9517209.
   \item[]Ali Neshati, Bradley Rey, \textbf{Ahmed Shariff Mohommed Faleel}, Sandra Bardot, Celine Latulipe, and Pourang Irani. 2021. ``BezelGlide: Interacting with Graphs on Smartwatches with Minimal Screen Occlusion''. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI '21). Association for Computing Machinery, New York, NY, USA, Article 501, 1–13. https://doi.org/10.1145/3411764.3445201
