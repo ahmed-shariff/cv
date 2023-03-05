@@ -65,6 +65,7 @@ sorting=none
 \newcommand{\fiverate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle\faCircle}}
 \newcommand{\fourrate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle\faCircle[regular]}}
 \newcommand{\threerate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle\faCircle[regular]\faCircle[regular]}}
+\newcommand{\tworate}{{\footnotesize\color{Emerald}\faCircle\faCircle\faCircle[regular]\faCircle[regular]\faCircle[regular]}}
 \newcommand{\drawratebox}[2]{%
   \makebox[0.4\textwidth]{~~#1\hfill#2~~}}
 % from https://tex.stackexchange.com/questions/77821/insert-text-into-hrulefill
@@ -107,68 +108,11 @@ sorting=none
     human day-to-day experience. }
 \end{center}
 \vspace{0.1cm}
-\sectiontitle{Technical Skills}\\
+\input{technical_skills.tex}
 % \rule{0.75\textwidth}{0.4pt}
-\begin{center}
-  \parbox{0.9\textwidth}{
-    \skilltitle{Programming}\\[2pt]
-    \vspace{-0.6cm}\\
-    \drawratebox{python, C\#, Javascript, Lisp}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{C++, Java}{\fourrate}\\[2pt]
-  }
-  \vspace{-0.1cm}\\
-  \parbox{0.9\textwidth}{
-    \skilltitle{Platform}\\[2pt]
-    \vspace{-0.6cm}\\
-    \drawratebox{Unity (AR/VR/Mobile)}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{Android}{\fourrate}\\[2pt]
-  }
-  \vspace{-0.1cm}\\
-  \parbox{0.9\textwidth}{
-    \skilltitle{AI Tools}\\[2pt]
-    \vspace{-0.6cm}\\
-    \drawratebox{Data analysis}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{Deep Leaning (CV, NLP)}{\fiverate}\\[2pt]
-    \drawratebox{MLOps}{\threerate}\\[2pt]
-  }
-  \vspace{-0.1cm}\\
-  \parbox{0.9\textwidth}{
-    \skilltitle{Research}\\[2pt]
-    \vspace{-0.6cm}\\
-    \drawratebox{Ideation \& planning}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{User studies}{\fiverate}\\[2pt]
-    \drawratebox{Analysis \& reporting}{\fiverate}\\[2pt]
-  }
-  \vspace{-0.1cm}\\
-  \parbox{0.9\textwidth}{
-    \skilltitle{Miscellaneous}\\[2pt]
-    \vspace{-0.6cm}\\
-    \drawratebox{Cloud platforms (aws, gcloud)}{\threerate}
-    \hspace{1cm}
-    \drawratebox{Database (mongodb, firebase)}{\threerate}\\[2pt]
-    \drawratebox{Embedded systems}{\threerate}
-  }
-\end{center}
-\vspace{0.1cm}
-\sectiontitle{Soft Skills}\\
-\begin{center}
-  \parbox{0.9\textwidth}{
-    \drawratebox{Teamwork}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{Communication}{\fiverate}\\[2pt]
-    \drawratebox{Presentation}{\fiverate}
-    \hspace{1cm}
-    \drawratebox{Technical writing}{\fiverate}\\[2pt]
-    \drawratebox{Leadership}{\fiverate}
-  }
-\end{center}
 % \\    
 \vspace{0.4cm}
-\sectiontitle{Work \& Research Experience}\\
+\sectiontitle{Work \& Research Experience}\\[3pt]
 \begin{center}
   \begin{minipage}[h]{0.95\linewidth}
     \timeline{March 2021 - April 2022}{Associate Researcher, Intern}{Huawei Technologies Canada}
@@ -178,14 +122,14 @@ sorting=none
       \setlength\itemsep{-0.1cm}
     \item Was part of the Human Machine Interactions lab. Worked on a range of HCI projects.
     \item Developed research ideas, executed relevant user studies and built demo applications.
-    \item Produced a paper on typing on virtual keyboards (currently in submission at CHI '23).
+    \item Produced a paper on typing on virtual keyboards (Accepcted at CHI '23).
     \end{itemize}
   \end{minipage}
 \end{center}
 \vspace{-0.1cm}
 \begin{center}
   \begin{minipage}[h]{0.95\linewidth}
-    \timeline{August 2019 - Present}{PhD student}{University of British Columbia - Okanagan}
+    \timeline{August 2019 - Present}{PhD Candidate}{University of British Columbia - Okanagan}
     \centering
     \vspace{-0.3cm}
     \begin{itemize}
@@ -271,15 +215,16 @@ sorting=none
 \sectiontitle{Publications}
 \vspace{0.1cm}\\
 \begin{itemize}
+  \item[]Francisco Perella-Holfeld, \textbf{Shariff AM Faleel}, Pourang Irani. (2023) ``Evaluating design guidelines for hand proximate in-situ user interfaces''. (In submission at DIS 2023)
   \item[]Fouad Alallah, \textbf{Shariff AM Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani. (2023) ``Evaluation of Situated Space-time Cube Analytics for In-situ Data Exploration''. (In submission at Information Visualization)
-  \item[]\textbf{Shariff AM Faleel}, Yishuo Liu, Roya A Cody, Bradley Rey, Linghao Du, Jiangyue Yu, Da-Yuan Huang, Pourang Irani, Wei Li. (2023) ``T-Force: Exploring the Use of Typing Force for Three State Virtual Keyboards''. (In submission at CHI 2023)
-  \item[]Ali Neshati, Aaron Salo, \textbf{Shariff AM Faleel}, Ziming Li, Hai-Ning Liang, Celine Latulipe, and Pourang Irani. 2022. ``EdgeSelect: Smartwatch Data Interaction with Minimal Screen Occlusion.'' In Proceedings of the 2022 International Conference on Multimodal Interaction (ICMI '22). Association for Computing Machinery, New York, NY, USA, 288–298. \\https://doi.org/10.1145/3536221.3556586
-  \item[]Fouad Alallah, \textbf{Shariff AM Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani (2022). ``SSCA: situated space-time cube analytics.'' In M. Agus, W. Aigner, and T. Hoellt, EuroVis 2022 - Short Papers (pp. ). : The Eurographics Association.
-  \item[]\textbf{Shariff AM Faleel}, Michael Gammon, Kevin Fan, Da-Yuan Huang, Wei Li and Pourang Irani, ``HPUI: Hand Proximate User Interfaces for One-Handed Interactions on Head Mounted Displays,'' in IEEE Transactions on Visualization and Computer Graphics, vol. 27, no. 11, pp. 4215-4225, Nov. 2021, doi: 10.1109/TVCG.2021.3106493.
-  \item[]\textbf{Shariff AM Faleel}, Bibhushan Raj Joshi and Bradley Rey, ``Writely: Force Feedback for Non-Dominant Hand Writing Training,'' 2021 IEEE World Haptics Conference (WHC), 2021, pp. 340-340, doi: 10.1109/WHC49131.2021.9517209.
+  \item[]\textbf{Shariff AM Faleel}, Yishuo Liu, Roya A Cody, Bradley Rey, Linghao Du, Jiangyue Yu, Da-Yuan Huang, Pourang Irani, Wei Li. (2023) ``T-Force: Exploring the Use of Typing Force for Three State Virtual Keyboards''. (Accepted at CHI 2023)
+  \item[]Ali Neshati, Aaron Salo, \textbf{Shariff AM Faleel}, Ziming Li, Hai-Ning Liang, Celine Latulipe, and Pourang Irani. 2022. ``EdgeSelect: Smartwatch Data Interaction with Minimal Screen Occlusion.'' In Proceedings of the 2022 International Conference on Multimodal Interaction (ICMI '22). Association for Computing Machinery, New York, NY, USA, 288–298. https://doi.org/10.1145/3536221.3556586
+  \item[]Fouad Alallah, \textbf{Shariff AM Faleel}, Yumiko Sakamoto, Bradley Rey, and Pourang Irani (2022). ``SSCA: situated space-time cube analytics.'' In M. Agus, W. Aigner, and T. Hoellt, EuroVis 2022 - Short Papers (pp. ). : The Eurographics Association. https://doi.org/10.2312/evs.20221088
+  \item[]\textbf{Shariff AM Faleel}, Michael Gammon, Kevin Fan, Da-Yuan Huang, Wei Li and Pourang Irani, ``HPUI: Hand Proximate User Interfaces for One-Handed Interactions on Head Mounted Displays,'' in IEEE Transactions on Visualization and Computer Graphics, vol. 27, no. 11, pp. 4215-4225, Nov. 2021, https://doi.org/10.1109/TVCG.2021.3106493.
+  \item[]\textbf{Shariff AM Faleel}, Bibhushan Raj Joshi and Bradley Rey, ``Writely: Force Feedback for Non-Dominant Hand Writing Training,'' 2021 IEEE World Haptics Conference (WHC), 2021, pp. 340-340, https://doi.org/10.1109/WHC49131.2021.9517209.
   \item[]Ali Neshati, Bradley Rey, \textbf{Ahmed Shariff Mohommed Faleel}, Sandra Bardot, Celine Latulipe, and Pourang Irani. 2021. ``BezelGlide: Interacting with Graphs on Smartwatches with Minimal Screen Occlusion''. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI '21). Association for Computing Machinery, New York, NY, USA, Article 501, 1–13. https://doi.org/10.1145/3411764.3445201
-  \item[]\textbf{Shariff A. M. Faleel}, Michael Gammon, Yumiko Sakamoto, Carlo Menon, and Pourang Irani. 2020. ``User gesture elicitation of common smartphone tasks for hand proximate user interfaces''. In \textit{Proceedings of the 11th Augmented Human International Conference (AH '20)}. Association for Computing Machinery, New York, NY, USA, Article 6, 1–8. \\DOI:https://doi.org/10.1145/3396339.3396363
-  \item[]Yurii Vasylkiv, Ali Neshati, \textbf{Shariff A. M. Faleel}, Yumiko Sakamoto, and Pourang Irani. 2020. ``Using guessability framework: age-related differences in hand gesture interaction''. In \textit{Proceedings of the 11th Augmented Human International Conference (AH '20)}. ACM, New York, NY, USA, Article 24, 1–2. DOI:https://doi.org/10.1145/3396339.3396394
+  \item[]\textbf{Shariff A. M. Faleel}, Michael Gammon, Yumiko Sakamoto, Carlo Menon, and Pourang Irani. 2020. ``User gesture elicitation of common smartphone tasks for hand proximate user interfaces''. In \textit{Proceedings of the 11th Augmented Human International Conference (AH '20)}. Association for Computing Machinery, New York, NY, USA, Article 6, 1–8. \\https://doi.org/10.1145/3396339.3396363
+  \item[]Yurii Vasylkiv, Ali Neshati, \textbf{Shariff A. M. Faleel}, Yumiko Sakamoto, and Pourang Irani. 2020. ``Using guessability framework: age-related differences in hand gesture interaction''. In \textit{Proceedings of the 11th Augmented Human International Conference (AH '20)}. ACM, New York, NY, USA, Article 24, 1–2. https://doi.org/10.1145/3396339.3396394
   \item[]\textbf{Ahmed Shariff, M.F.}, Nawarathna, R.D. (2019). ``A Novel Dialogue Manager Model for Spoken Dialogue Systems Based on User Input Learning.'' In: Hemanth, J., Silva, T., Karunananda, A. (eds) Artificial Intelligence. SLAAI-ICAI 2018. Communications in Computer and Information Science, vol 890. Springer, Singapore. https://doi.org/10.1007/978-981-13-9129-3\_14
   \item[]\textbf{M.F.A. Shariff}. and R.D. Nawarathna, ``A Dialogue Management Model with User Input Learning.'' Proceedings of the Postgraduate Institute of Science Research Congress 2017. (Abstract)
 \end{itemize}
